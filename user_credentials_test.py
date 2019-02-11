@@ -1,5 +1,5 @@
 import unittest 
-from user import User #, Credential
+from user import User
 
 class TestUser(unittest.TestCase):
 	'''
@@ -8,22 +8,20 @@ class TestUser(unittest.TestCase):
 	    unittest.TestCase: helps in creating test cases
 	'''
     
-
-
 	def setUp(self):
 		'''
 		Function to create a user account before each test
 		'''
-        # self.new_contact =User("James","Muriuki","12") # create contact object
-		self.new_user = User('Consolee','Umutoni','12')
+		self.new_user=User('sandrine','12')
 
-	def test__init__(self):
+	def __init__(self,user_name,password):
 		'''
-		Test to if check the initialization/creation of user instances is properly done
+		Method to define the properties for each user object will hold.
 		'''
-		self.assertEqual(self.new_user.first_name,'Consolee')
-		self.assertEqual(self.new_user.last_name,'Umutoni')
-		self.assertEqual(self.new_user.password,'12')
+
+		# instance variables
+		self.user_name = user_name
+		self.password = password
 
 if __name__ == '__main__':
     unittest.main()
