@@ -1,14 +1,16 @@
 class User:
-	'''
+	"""
 	Class to create user accounts and save their information
-	'''
-	users_list = []
+	"""
+	users_list = [] #Empty users
     
-	def __init__(self,username,password):
-		'''
-		Method to define the properties for each user object will hold.
-		'''
+	def __init__(self,user_name,password):
+		
 
 		# instance variables
-		self.username=username
-		self.password=password
+		self.user_name = user_name
+		self.password = password
+
+	def save_user(self):
+
+           User.users_list.append(self)  
