@@ -13,4 +13,4 @@ class User:
 
 	def save_user(self):
 
-           User.users_list.append(self)  
+           User.users_list.append(self)
