@@ -14,11 +14,11 @@ def save_user(user):
 	'''
 	User.save_user(user)
 
-def display_user(user_name):
+def display_user_name(user_name):
 	'''
 	Function to display user saved by a user
 	'''
-	return User.display_user(user_name)
+	User.display_user_name(user_name)
 
 
 def main():
@@ -48,12 +48,12 @@ def main():
 
                     elif short_code == 'du':
 
-                            if display_user():
+                            if display_user_name(user_name):
                                     print("Here is a list of all your username")
                                     print('\n')
 
-                                    for user in display_user():
-                                            print(f"{user.user_name} {user.p-Password}")
+                                    for user in display_user_name():
+                                            print(f"{user.user_name} {user.Password}")
 
                                     print('\n')
                             else:
