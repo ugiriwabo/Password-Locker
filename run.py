@@ -1,4 +1,19 @@
 #!/usr/bin/env python3.6
+from user_credentials_test import User
+
+def create_username(u_name, p_password):
+	'''
+	Function to create a new user account
+	'''
+	new_user = User(u_name,p_password)
+	return new_user
+
+def save_user(user):
+	'''
+	Function to save a new user account
+	'''
+	User.save_user(user)
+
 
 def main():
     print("Hello Welcome to your user list. What is your name?")
@@ -32,7 +47,7 @@ def main():
                                     print('\n')
 
                                     for user in display_user():
-                                            print(f"{user.user_name} {user.Password}")
+                                            print(f"{user.user_name} {user.p-Password}")
 
                                     print('\n')
                             else:
@@ -47,7 +62,7 @@ def main():
                             search_user = input()
                             if check_existing_user(search_user):
                                     search_user = find_user(search_user)
-                                    print(f"{search_user.first_name} {search_user.password}")
+                                    print(f"{search_user.u-name} {search_user.password}")
                                     print('-' * 20)
                             else:
                                     print("That user does not exist")
