@@ -14,6 +14,12 @@ def save_user(user):
 	'''
 	User.save_user(user)
 
+def display_user(user_name):
+	'''
+	Function to display user saved by a user
+	'''
+	return User.display_user(user_name)
+
 
 def main():
     print("Hello Welcome to your user list. What is your name?")
@@ -23,11 +29,11 @@ def main():
     print('\n')
 
     while True:
-                    print("Use these short codes : cc - create a new username, dc - display username, fc -find a username, ex -exit the users list ")
+                    print("Use these short codes : cu - create a new username, du - display username, fu -find a username, ex -exit the users list ")
 
                     short_code = input().lower()
 
-                    if short_code == 'cc':
+                    if short_code == 'cu':
 
                             print ("User name ....")
                             u_name= input()
@@ -40,7 +46,7 @@ def main():
                             print(f"New user {u_name} {password} created")
                             print ('\n')
 
-                    elif short_code == 'dc':
+                    elif short_code == 'du':
 
                             if display_user():
                                     print("Here is a list of all your username")
@@ -52,10 +58,10 @@ def main():
                                     print('\n')
                             else:
                                     print('\n')
-                                    print("You dont seem to have any contacts saved yet")
+                                    print("You dont seem to have any user saved yet")
                                     print('\n')
 
-                    elif short_code == 'fc':
+                    elif short_code == 'fu':
 
                             print("Enter the username you want to search for")
 
