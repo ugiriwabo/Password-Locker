@@ -12,7 +12,11 @@ python3.6
 pip
 pyperclip
 
-## Testing the Application
+### Testing the Application
+
 To run the tests for the class file:
 
   $ python3.6 user_credentials_test.py
+
+### Technologies Used
+Python3.6
