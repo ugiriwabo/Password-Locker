@@ -11,3 +11,8 @@ Password Locker is a terminal run python application that allows users to store 
 python3.6
 pip
 pyperclip
+
+## Testing the Application
+To run the tests for the class file:
+
+  $ python3.6 user_credentials_test.py
