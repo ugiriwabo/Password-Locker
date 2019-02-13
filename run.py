@@ -20,6 +20,13 @@ def display_user():
 	'''
 	return User.display_user()
 
+def delete_user():
+        '''
+        delete_contact method deletes a saved contact from the contact_list
+        '''
+
+        return User.delete_user(self)
+
 
 def main():
     print("Hello Welcome to your user list. What is your name?")
@@ -29,7 +36,7 @@ def main():
     print('\n')
 
     while True:
-                    print("Use these short codes : cu - create a new username, du - display username, fu -find a username, ex -exit the users list ")
+                    print("Use these short codes : cu - create a new username, du - display username, dl - delete user, fu -find a username, ex -exit the users list ")
 
                     short_code = input().lower()
 

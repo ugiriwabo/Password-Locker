@@ -59,3 +59,32 @@ class User:
 			method that returns the contact list
 			'''
 			return cls.users_list
+
+
+class Credentials:
+	"""
+	Class to create user accounts and save their information
+	"""
+	credentials_list = [] #Empty users
+
+	@classmethod
+	def check_user(cls,user_name,password):
+		'''
+		Method that checks if the name and password entered match entries in the users_list
+		'''
+		current_user = ''
+		for user in User.users_list:
+			if (user.user_name == user_name and user.password == password):
+				current_user = user.user_name
+		return current_user
+    
+	def __init__(self,user_name,password):
+			
+
+			# instance variables
+			self.user_name = user_name
+			self.password = password
+
+	def save_user(self):
+
+			Credentials.credentials_list.append(self)
