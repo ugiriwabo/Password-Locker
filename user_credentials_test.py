@@ -98,6 +98,13 @@ class TestUser(unittest.TestCase):
 
         self.assertTrue(user_exists)    
 
+    def test_display_all_user(self):
+        '''
+        method that returns a list of all contacts saved
+        '''
+
+        self.assertEqual(User.display_user(),User.users_list)
+
 
 if __name__ == '__main__':
     unittest.main()
